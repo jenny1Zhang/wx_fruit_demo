@@ -58,25 +58,27 @@ Page({
   //上拉加载
   onReachBottom: function(){
     // console.log('reachbottom');
-    var that = this;
-    wx.showLoading({
-      title: '正在加载',
-    });
-    // console.log(that.data.pageindex,seckillData.seckillList.length)
-    var index = that.data.pageindex+1;
-    if(seckillData.seckillList.length>index){
-      var data = that.data.seckillList.concat(seckillData.seckillList[index]);
-      setTimeout(function(){
-        that.setData({
-          pageindex: index,
-          seckillList: data
-        });
-        wx.hideLoading();
-      },1000);
-    }else{
-      setTimeout(function(){
-        wx.hideLoading()
-      },1000);
+    if(this.data.pageindex<1){
+      var that = this;
+      wx.showLoading({
+        title: '正在加载',
+      });
+      // console.log(that.data.pageindex,seckillData.seckillList.length)
+      var index = that.data.pageindex+1;
+      if(seckillData.seckillList.length>index){
+        var data = that.data.seckillList.concat(seckillData.seckillList[index]);
+        setTimeout(function(){
+          that.setData({
+            pageindex: index,
+            seckillList: data
+          });
+          wx.hideLoading();
+        },1000);
+      }else{
+        setTimeout(function(){
+          wx.hideLoading()
+        },1000);
+      }
     }
   },
   onShareAppMessage(res) {
@@ -95,48 +97,6 @@ Page({
   },
   //事件处理函数
   bindViewTap: function() {
-    console.log(this.route)
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-    // wx.switchTab({
-    //   url: '../my/my'
-    // })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+
   }
 })

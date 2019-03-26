@@ -7,7 +7,7 @@
   <!-- <view class="searchbox">
     <view class="inputbox">
       <input placeholder='请输入水果名称' />
-      <text bindtap="bindViewTap" class="iconfont icon-sousu"></text>
+      <text class="iconfont icon-sousu"></text>
     </view>
   </view> -->
   <searchBox value="请输入水果名称"></searchBox>
@@ -36,7 +36,7 @@
             <view>¥ {{item.price}}</view>
             <view>¥ {{item.pre_price}}</view>
           </view>
-          <view><text bindtap="bindViewTap" class="iconfont icon-zengjia"></text></view>
+          <view><text class="iconfont icon-zengjia"></text></view>
         </view>
       </view>
     </view> -->

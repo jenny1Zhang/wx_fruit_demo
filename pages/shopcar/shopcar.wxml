@@ -17,8 +17,8 @@
             <view class="text">{{item.text}}</view>
             <view class="operation">
               <view class="price">
-                <view>{{item.price}}</view>
-                <view>{{item.pre_price}}</view>
+                <view>¥{{item.price}}</view>
+                <view>¥{{item.pre_price}}</view>
               </view>
               <view class="add">
                 <view id="{{index}}" bindtap="add">+</view>

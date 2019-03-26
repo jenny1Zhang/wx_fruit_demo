@@ -9,7 +9,7 @@ Component({
 
   methods: {
     goDetail(e){
-      console.log(e)
+      // console.log(e)
       wx.navigateTo({
         url: '/pages/goodDetail/goodDetail?good_id='+e.currentTarget.id
       })

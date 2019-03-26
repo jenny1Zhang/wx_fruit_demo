@@ -16,7 +16,7 @@ Page({
         this.setData({
           gooddata: data[i]
         })
-        console.log(this.data.gooddata)
+        // console.log(this.data.gooddata)
         return;
       }
     }

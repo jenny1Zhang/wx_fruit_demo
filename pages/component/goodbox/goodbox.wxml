@@ -1,6 +1,10 @@
 <view class="goodbox">
   <view class="seckill" wx:for="{{data}}" wx:key="{{item.id}}">
-    <view id="{{item.id}}" bindtap="goDetail" class="photo"><image class="img" src="{{item.image}}" mode="aspectFit" /></view>
+    <!-- <navigator url="/pages/goodDetail/goodDetail?good_id={{item.id}}" id="{{item.id}}" class="photo"> -->
+    <view id="{{item.id}}" bindtap="goDetail" class="photo">
+      <image class="img" src="{{item.image}}" mode="aspectFit" />
+    </view>
+    <!-- </navigator> -->
     <view class="text">
       <view id="{{item.id}}" bindtap="goDetail">{{item.name}}-{{item.weight}}</view>
       <view>{{item.text}}</view>

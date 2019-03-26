@@ -11,8 +11,8 @@ Page({
   },
 
   onGotUserInfo(e){
-    console.log(JSON.parse(e.detail.rawData));
-    console.log(JSON.parse(e.detail.rawData).nickName);
+    // console.log(JSON.parse(e.detail.rawData));
+    // console.log(JSON.parse(e.detail.rawData).nickName);
     this.setData({
       userInfo: JSON.parse(e.detail.rawData)
     })

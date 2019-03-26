@@ -2,5 +2,6 @@
   "usingComponents": {
     "searchBox": "/pages/component/searchbox/searchbox",
     "goodBox": "/pages/component/goodbox/goodbox"
-  }
+  },
+  "backgroundColor": "#fff"
 }
