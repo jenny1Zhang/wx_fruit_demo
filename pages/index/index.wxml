@@ -1,0 +1,48 @@
+
+<view class="container">
+  <view class="topbox">
+    <view class="address" bindtap="chooseAdd">{{address}}</view>
+    <view class="scan"><text bindtap="getScan" class="iconfont icon-saoma"></text></view>
+  </view>
+  <!-- <view class="searchbox">
+    <view class="inputbox">
+      <input placeholder='请输入水果名称' />
+      <text bindtap="bindViewTap" class="iconfont icon-sousu"></text>
+    </view>
+  </view> -->
+  <searchBox value="请输入水果名称"></searchBox>
+  <view class="swiperbox">
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" indicator-color="#ccc">
+      <block wx:for="{{swiperList}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="seckillbox">
+    <view class="title">
+      <view>精选水果</view>
+      <view>查看更多<text bindtap="bindViewTap" class="iconfont icon-jiantou"></text></view>
+    </view>
+    <goodBox data="{{seckillList}}" bindmyevent="addGood"></goodBox>
+    <!-- <view class="seckill" wx:for="{{seckillList}}" wx:key="{{item.id}}">
+      <view class="photo"><image src="{{item.image}}" mode="aspectFit" /></view>
+      <view class="text">
+        <view>{{item.name}}-{{item.weight}}</view>
+        <view>{{item.text}}</view>
+        <view class="price">
+          <view>
+            <view>¥ {{item.price}}</view>
+            <view>¥ {{item.pre_price}}</view>
+          </view>
+          <view><text bindtap="bindViewTap" class="iconfont icon-zengjia"></text></view>
+        </view>
+      </view>
+    </view> -->
+  </view>
+
+
+
+
+</view>

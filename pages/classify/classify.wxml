@@ -1,0 +1,28 @@
+<view class="container">
+  <searchBox value="草莓"></searchBox>
+  <view class="content">
+    <scroll-view class="con_left" scroll-y>
+      <view wx:for="{{classData}}" wx:key="{{item.id}}" id="{{index}}" class="{{index==activeIndex1 ? 'active' : ''}}" bindtap="changetypes1">{{item.name}}</view>
+    </scroll-view>
+    <view class="con_right">
+      <view class="box1">
+        <scroll-view class="right_top" scroll-x>
+          <!-- {{classData[activeIndex1]}} -->
+          <view wx:for="{{classData[activeIndex1].types}}" wx:key="{{item.id}}" id="{{item.id}}" class="{{item.id==activeIndex2 ? 'active' : ''}}" bindtap="changetypes2">{{item.title}}</view>
+        </scroll-view>
+      </view>
+      <view class="box2">
+        <scroll-view class="right_content" scroll-y scroll-into-view="{{activeIndex3}}" bindscroll="contentscroll">
+          <view class="right_box" wx:for="{{classData[activeIndex1].types}}" wx:key="{{item.id}}" id="{{item.id}}">
+            <view class="title">{{item.title}}</view>
+            <!-- <view wx:for="{{item.data}}" wx:key="{{itemdata.id}}" id="{{itemdata.id}}" wx:for-index="ind" wx:for-item="itemdata">
+              {{itemdata.name}}
+            </view> -->
+
+            <goodBox data="{{item.data}}"></goodBox>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

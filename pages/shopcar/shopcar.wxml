@@ -1,0 +1,46 @@
+<view class="container">
+  <view wx:if="{{!goodsdata.length}}" class="nogoods">暂无商品</view>
+  <!-- <view class="shopcarnum">{{goodsdata.length}}</view> -->
+  <view wx:if="{{goodsdata.length}}">
+    <view class="title">
+      <text bindtap="deleteTap" class="iconfont icon-shanchu" bindtap="deleteAll"></text>
+    </view>
+    <scroll-view scrll-y class="goods">
+      <checkbox-group bindchange="changecheck">
+        <view class="good" wx:for="{{goodsdata}}" wx:key="{{item.id}}" id="{{item.id}}">
+          <view>
+            <checkbox value="{{item.id}}" checked="{{item.checked}}" />
+            <image mode="aspectFit" class="photo" src="{{item.image}}" />
+          </view>
+          <view>
+            <view class="name">{{item.name}}-{{item.weight}}</view>
+            <view class="text">{{item.text}}</view>
+            <view class="operation">
+              <view class="price">
+                <view>{{item.price}}</view>
+                <view>{{item.pre_price}}</view>
+              </view>
+              <view class="add">
+                <view id="{{index}}" bindtap="add">+</view>
+                <view>{{item.num}}</view>
+                <view id="{{index}}" bindtap="reduce">-</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </checkbox-group>
+    </scroll-view>
+  </view>
+
+  <view class="payment">
+    <view>
+      <checkbox-group bindchange="changeallcheck">
+        <checkbox value="allcheck" checked="{{allchecked}}" />全选
+      </checkbox-group>
+      <view>合计:<view>¥{{allMoney}}</view>（不含运费）</view>
+    </view>
+    <view>
+      <view>去结算</view>
+    </view>
+  </view>
+</view>

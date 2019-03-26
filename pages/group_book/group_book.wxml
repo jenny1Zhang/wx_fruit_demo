@@ -1,0 +1,15 @@
+<view class="container">
+  <view wx:for="{{list}}" wx:key="{{index}}">
+    <view class="photo"><image src="{{item.image}}" mode="aspectFit" /></view>
+    <view class="name">{{item.name}}</view>
+    <view class="text">
+      <view>{{item.text}}</view>
+      <view>距离结束：{{item.end_time}}</view>
+    </view>
+    <view class="price">
+      <view>¥{{item.price}}</view>
+      <view><view>去拼团<text bindtap="bindViewTap" class="iconfont icon-jiantou"></text></view></view>
+    </view>
+    <view class="people">{{item.people_num}}人拼团</view>
+  </view>
+</view>

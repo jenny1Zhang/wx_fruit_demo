@@ -1,0 +1,51 @@
+{
+  "pages":[
+  "pages/index/index",
+    "pages/goodDetail/goodDetail",
+    "pages/my/my",
+    "pages/classify/classify",
+    "pages/group_book/group_book",
+    "pages/shopcar/shopcar"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "水果商城",
+    "backgroundColor": "black",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 1
+  },
+  "tabBar":{
+    "color": "#6e6d6b",
+    "selectedColor": "#f9f027",
+    "borderStyle": "black",
+    "backgroundColor": "#292929",
+    "list":[{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/index.png",
+      "selectedIconPath": "images/index_act.png",
+      "text": "首页"
+    },{
+      "pagePath": "pages/group_book/group_book",
+      "iconPath": "images/groupbook.png",
+      "selectedIconPath": "images/groupbook_act.png",
+      "text": "拼团"
+    },{
+      "pagePath": "pages/classify/classify",
+      "iconPath": "images/classify.png",
+      "selectedIconPath": "images/classify_act.png",
+      "text": "分类"
+    },{
+      "pagePath": "pages/shopcar/shopcar",
+      "iconPath": "images/shopcar.png",
+      "selectedIconPath": "images/shopcar_act.png",
+      "text": "购物车"
+    },{
+      "pagePath": "pages/my/my",
+      "iconPath": "images/my.png",
+      "selectedIconPath": "images/my_act.png",
+      "text": "我的"
+    }]
+  }
+}

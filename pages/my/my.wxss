@@ -1,0 +1,94 @@
+.container{
+  width: 100%;
+  /* height: 100%; */
+  background: #f3f3f3;
+}
+
+.userinfo{
+  width: 100%;
+  padding: 100rpx 0;
+  background: white;
+  margin-bottom: 20px;
+}
+.userinfo>button{
+  width: 30%;
+  margin-left: 35%;
+}
+.userinfo>view{
+  display: flex;
+}
+.userinfo .photo{
+  margin-left: 10%;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+}
+.userinfo .name{
+  margin-left: 40rpx;
+  height:180rpx;
+  line-height:180rpx;
+  font-size: 18px;
+}
+
+.orders{
+  width: 100%;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  background: white;
+  margin-bottom: 20px;
+}
+.orders>.title{
+  display: flex;
+  width: 100%;
+  padding: 20rpx 0;
+  border-bottom: 2px solid #f3f3f3;
+}
+.orders>.title>view{
+  flex: 1;
+  font-size: 14px;
+}
+.orders>.title>view:first-child .iconfont{
+  color: #1e905f;
+}
+.orders>.title>view:last-child{
+  text-align: right;
+  font-size: 12px;
+  color: #aaa;
+}
+.orders>.title>view:last-child .iconfont{
+  font-size: 12px;
+}
+.orders>.order{
+  display: flex;
+}
+.orders>.order>view{
+  flex: 1;
+  text-align: center;
+  color: #1e905f;
+  padding: 15rpx 0;
+}
+.orders>.order>view>view{
+  padding-top: 5rpx;
+}
+.orders>.order>view .iconfont{
+  font-size: 20px;
+  color: #1e905f;
+}
+
+.operations{
+  background: white;
+  width: 100%;
+  font-size: 15px;
+  color: #666;
+}
+.operations>view{
+  display: flex;
+  padding: 30rpx;
+  border-bottom: 1px solid #eee;
+}
+.operations>view>view{
+  flex: 1;
+}
+.operations>view>view:last-child{
+  text-align: right;
+}

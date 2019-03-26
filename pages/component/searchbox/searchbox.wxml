@@ -1,0 +1,6 @@
+<view class="searchbox">
+  <view class="inputbox">
+    <input placeholder='{{value}}' />
+    <text bindtap="bindViewTap" class="iconfont icon-sousu"></text>
+  </view>
+</view>

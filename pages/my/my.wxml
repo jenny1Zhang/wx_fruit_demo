@@ -1,0 +1,55 @@
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!userInfo.nickName}}" class="login" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">登陆</button>
+    <view wx:if="{{userInfo.nickName}}">
+      <image class="photo" src="{{userInfo.avatarUrl}}" />
+      <view class="name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="orders">
+    <view class="title">
+      <view><text bindtap="bindViewTap" class="iconfont icon-quanbudingdan"></text> 我的订单</view>
+      <view>全部订单 <text bindtap="bindViewTap" class="iconfont icon-jiantou"></text></view>
+    </view>
+    <view class="order">
+      <view>
+        <text bindtap="bindViewTap" class="iconfont icon-daifukuan"></text>
+        <view>待付款</view>
+      </view>
+      <view>
+        <text bindtap="bindViewTap" class="iconfont icon-daifahuo"></text>
+        <view>待发货</view>
+      </view>
+      <view>
+        <text bindtap="bindViewTap" class="iconfont icon-daipingjia"></text>
+        <view>待评价</view>
+      </view>
+    </view>
+  </view>
+  <view class="operations">
+    <view>
+      <view>邀请好友</view>
+      <view><text bindtap="bindViewTap" class="iconfont icon-jiantou"></text></view>
+    </view>
+    <view>
+      <view>我的红包</view>
+      <view><text bindtap="bindViewTap" class="iconfont icon-jiantou"></text></view>
+    </view>
+    <view>
+      <view>收获地址</view>
+      <view><text bindtap="bindViewTap" class="iconfont icon-jiantou"></text></view>
+    </view>
+    <view>
+      <view>联系客服</view>
+      <view><text bindtap="bindViewTap" class="iconfont icon-jiantou"></text></view>
+    </view>
+    <view>
+      <view>领券中心</view>
+      <view><text bindtap="bindViewTap" class="iconfont icon-jiantou"></text></view>
+    </view>
+    <view>
+      <view>系统设置</view>
+      <view><text bindtap="bindViewTap" class="iconfont icon-jiantou"></text></view>
+    </view>
+  </view>
+</view>

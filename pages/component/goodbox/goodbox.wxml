@@ -1,0 +1,16 @@
+<view class="goodbox">
+  <view class="seckill" wx:for="{{data}}" wx:key="{{item.id}}">
+    <view id="{{item.id}}" bindtap="goDetail" class="photo"><image class="img" src="{{item.image}}" mode="aspectFit" /></view>
+    <view class="text">
+      <view id="{{item.id}}" bindtap="goDetail">{{item.name}}-{{item.weight}}</view>
+      <view>{{item.text}}</view>
+      <view class="price">
+        <view>
+          <view>¥ {{item.price}}</view>
+          <view>¥ {{item.pre_price}}</view>
+        </view>
+        <view><text id="{{item.id}}" bindtap="addGood" class="iconfont icon-zengjia"></text></view>
+      </view>
+    </view>
+  </view>
+</view>

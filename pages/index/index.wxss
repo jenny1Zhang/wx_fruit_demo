@@ -1,0 +1,136 @@
+
+view{
+  width: 100%;
+}
+.topbox{
+  width: 660rpx;
+  display: flex;
+  padding: 0 0 10px;
+  background: white;
+}
+.topbox .address{
+  flex: 3;
+  color: aqua;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.topbox .scan{
+  flex: 1;
+  text-align: right;
+}
+
+/* .searchbox{
+  width: 100%;
+  padding-left:37.5rpx;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background: white;
+}
+.inputbox{
+  width: 675rpx;
+  height: 40px;
+  box-sizing:border-box;
+  background: #eee;
+  padding-left: 50rpx;
+  border-radius: 20rpx;
+}
+.inputbox input{
+  height: 40px;
+  width: 85%;
+  float:left;
+}
+.inputbox text{
+  line-height: 40px;
+} */
+
+.swiperbox{
+  padding: 20rpx 37.5rpx;
+  box-sizing: border-box;
+  background: white;
+}
+.swiperbox image{
+  width: 100%;
+  height: 150px;
+}
+
+.seckillbox{
+  background: #f3f3f3;
+  padding-top: 10px;
+  background: white;
+}
+.seckillbox .title{
+  box-sizing: border-box;
+  display: flex;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+
+}
+.seckillbox .title view:last-child{
+  color: #777;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: right;
+}
+.seckill{
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+.seckill .photo{
+  flex:1;
+  text-align: center;
+}
+.seckill .photo image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.seckill .text{
+  flex:2;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #777;
+  padding: 3px 0px 10px 20px;
+}
+.text>view:first-child{
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  padding: 5px 0;
+}
+.price{
+  display: flex;
+  margin-top: 5px;
+}
+.price>view:first-child{
+  flex: 3;
+  display: flex;
+  padding-top: 5px;
+}
+.price>view:first-child>view:first-child{
+  font-size: 16px;
+  color: #dc9f82;
+}
+.price>view:first-child>view:last-child{
+  padding-top: 2px;
+  text-decoration:line-through;
+  font-weight: 300;
+}
+.price>view:last-child{
+  flex: 1;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 700;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+.price>view:last-child text{
+  width: 42rpx;
+  height: 42rpx;
+  text-align: center;
+  line-height:  42rpx;
+  background: #00a155;
+  color: white;
+  border-radius: 50%;
+}

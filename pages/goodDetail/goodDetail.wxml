@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="swiperbox">
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" indicator-color="#ccc">
+      <block>
+        <swiper-item>
+          <image src="{{gooddata.image}}" mode="aspectFit" />
+        </swiper-item>
+      </block>
+      <block>
+        <swiper-item>
+          <image src="{{gooddata.image}}" mode="aspectFit" />
+        </swiper-item>
+      </block>
+      <block>
+        <swiper-item>
+          <image src="{{gooddata.image}}" mode="aspectFit" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="namebox">
+    <view class="name">{{gooddata.name}}-{{gooddata.weight}}</view>
+    <view class="text">{{gooddata.text}}</view>
+    <view class="price">
+        <view>¥{{gooddata.price}}</view>
+        <view>¥{{gooddata.pre_price}}</view>
+    </view>
+    <view class="zhiliang">
+      <view><text bindtap="bindViewTap" class="iconfont icon-zhiliang"></text> 品质保障</view>
+      <view><text bindtap="bindViewTap" class="iconfont icon-zhiliang"></text> 坏果包退换</view>
+      <view><text bindtap="bindViewTap" class="iconfont icon-zhiliang"></text> 新鲜水果</view>
+    </view>
+  </view>
+  <view class="place">
+    <view>
+      <view>产地</view>
+      <view>广西</view>
+    </view>
+    <view>
+      <view>储存</view>
+      <view>常温</view>
+    </view>
+  </view>
+  <view class="photo">
+    <view>图文详情</view>
+    <image src="{{gooddata.image}}" mode="aspectFit" />
+    <image src="{{gooddata.image}}" mode="aspectFit" />
+    <image src="{{gooddata.image}}" mode="aspectFit" />
+  </view>
+</view>
